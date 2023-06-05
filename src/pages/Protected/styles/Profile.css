@@ -1,0 +1,21 @@
+.heading {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#my_button {
+    display: flex;
+    margin: auto;
+}
+
+.time_range {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 16px;
+}
+
+div>p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
