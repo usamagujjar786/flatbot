@@ -1,0 +1,21 @@
+.mainALert {
+  position: absolute;
+  width: 88%;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.alert {
+  padding: 10px;
+  position: relative;
+  z-index: 10;
+}
+
+.close {
+  position: absolute;
+  top: 50%;
+  right: 1%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}

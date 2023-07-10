@@ -1,0 +1,12 @@
+.upgrade {
+  padding: 10px 20px;
+}
+
+p.toptext {
+  color: #A0A0A0;
+}
+
+.upgrade>p {
+  color: #7C7C7C;
+  font-size: 0.8em;
+}

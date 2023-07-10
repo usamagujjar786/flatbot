@@ -1,21 +1,209 @@
 .heading {
-    text-align: center;
-    margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 #my_button {
-    display: flex;
-    margin: auto;
+  display: flex;
+  margin: auto;
 }
 
 .time_range {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 16px;
 }
 
 div>p {
-    font-size: 14px;
-    margin-bottom: 8px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.msg {
+  display: flex;
+  flex-direction: row;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  text-align: start !important;
+  margin-bottom: 24px !important;
+  padding: 0px 20px;
+
+}
+
+div.heading>p.caption {
+  color: #7C7C7C;
+  font-size: 12px;
+}
+
+.input_field {
+  display: flex;
+  flex-direction: column;
+}
+
+.input_field>input {
+  border-radius: 8px;
+  border: 1px solid #C4C7D4;
+  background-color: #F9F9FB;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  width: 80%;
+}
+
+textarea {
+  border-radius: 8px !important;
+  border: 1px solid #C4C7D4 !important;
+  background-color: #F9F9FB !important;
+  padding: 10px 16px !important;
+  margin-bottom: 16px !important;
+}
+
+.input_field>label {
+  font-weight: 500;
+  font-size: 0.8em;
+}
+
+.steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 60px;
+  align-items: center;
+}
+
+span.circle {
+  border-radius: 50%;
+  border: 1px solid #ADADAD;
+  padding: 4px 10px;
+  font-weight: 500;
+  cursor: pointer;
+  aspect-ratio: 1;
+  line-height: 1.1;
+  display: flex;
+
+}
+
+span.circle.circle_active {
+  background-color: #8C39AB;
+  color: white;
+  font-weight: 500;
+}
+
+.step1 {
+  position: relative;
+}
+
+.step2 {
+  position: relative;
+}
+
+.step3 {
+  position: relative;
+}
+
+.bottom_text {
+  position: absolute;
+  top: 110%;
+  left: -100%;
+  font-weight: 500;
+  color: #595959;
+  white-space: nowrap;
+  font-size: 0.75rem;
+}
+
+.bottom_text.active {
+  color: #8C39AB;
+}
+
+.hr {
+  color: 'gray';
+  width: 30%;
+}
+
+.hr.hr-active {
+  color: #8C39AB
+}
+
+div.age_pets {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.age_pets>.flexed {
+  flex: 1
+}
+
+
+img.trigger {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.dropdown>div.multi-select {
+  background-color: white;
+  position: absolute;
+  top: 110%;
+  right: 0%;
+  box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.75);
+  width: 100%;
+  border-radius: 5px;
+}
+
+.dropdown>div.multi-select>p {
+  padding: 2px 12px;
+  font-weight: 500;
+
+}
+
+div.dropdown {
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid #C4C7D4;
+  background-color: #F9F9FB;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  width: 80%;
+}
+
+div.dropdown>p {
+  padding: 2px 0px;
+  white-space: nowrap;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+label.upperlabel {
+  min-height: 1.75em;
+  margin-bottom: 0px;
+}
+
+span.button_inner_text {
+  color: white;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+span.button_inner_text>img {
+  width: 1em;
+  margin-top: 5px;
+}
+
+span.button_inner_text.disabled {
+  color: #6C7593;
+}
+
+span.button_inner_text.disabled>i {
+  color: #6C7593
 }

@@ -4,9 +4,13 @@ import { AuthContext } from '../useContext/AuthContext'
 import Public from '../pages/Public/Public'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PublicProvider from '../useContext/PublicContext'
-import ProtectedProvider from '../useContext/ProtectedContext'
+import ProtectedProvider, { ProtectedContext } from '../useContext/ProtectedContext'
 import Protected from '../pages/Protected/Protected'
 import Home from '../pages/Protected/Home';
+import MyALert from '../components/ALert';
+import axios from 'axios';
+import { ProgressBar } from 'react-bootstrap';
+import { url } from '../utils/url';
 function App() {
   // const [crx, setCrx] = useState('create-chrome-ext')
   // async function fetchHTML(url: any) {
@@ -48,17 +52,51 @@ function App() {
   //       });
   //   });
   // }
-  const { isAuthenticated } = useContext<{ isAuthenticated: boolean }>(AuthContext)
+  const { isAuthenticated, login, loading, setLoading } = useContext<{ isAuthenticated: boolean, loading: boolean, setLoading: any, login: any }>(AuthContext)
+  const { setUser } = useContext<{ setUser: any }>(ProtectedContext)
+  useEffect(() => {
+    const loadUser = async () => {
+      if (localStorage.getItem("flatbot")) {
+        try {
+          const res = await axios.get(`${url}/user/loaduser`, {
+            headers: {
+              token: localStorage.getItem('flatbot'),
+            }
+          })
+          if (res.data.success) {
+            setUser(res.data.data)
+            setLoading(false)
+            login()
+          }
+        } catch (error) {
+          localStorage.removeItem('flatbot')
+          setLoading(false)
+        }
+      } else {
+        localStorage.removeItem('flatbot')
+        setLoading(false)
+      }
+    }
+    loadUser()
+  }, [])
   return (
     <main>
-
-      {/* <button onClick={() => naviagte('/')}>click</button> */}
-      {isAuthenticated ?
-        <Protected />
-        // <Home />
-        :
-        <Public />
-      }
+      <div>
+        {loading &&
+          <ProgressBar animated now={100} />
+        }
+        {!loading &&
+          <>
+            <MyALert />
+            {isAuthenticated ?
+              <Protected />
+              // <Home />
+              :
+              <Public />
+            }
+          </>
+        }
+      </div>
     </main>
   )
 }

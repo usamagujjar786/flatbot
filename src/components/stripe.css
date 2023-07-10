@@ -1,0 +1,87 @@
+.stripe_main {
+  border-radius: 10px;
+  background-color: hsla(0, 0%, 10%, .05);
+  padding: 50px;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid silver;
+}
+
+.most_popular {
+  border-radius: 5px;
+  background-color: white;
+  width: fit-content;
+  margin-bottom: 1em;
+}
+
+.most_popular>p {
+  font-weight: 500;
+  color: #545a69;
+  padding: 4px;
+  line-height: 0.9;
+  font-size: 14px;
+}
+
+.logo_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo_container>.unlimited {
+  display: flex;
+  flex-direction: column;
+  ;
+}
+
+.logo_container>.unlimited>h4 {
+  color: #383838;
+  font-weight: 700;
+}
+
+.logo_container>.unlimited>p {
+  color: #96989e;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+}
+
+.price>.euro {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.price>.per_month {
+  display: flex;
+  flex-direction: column;
+  color: #b0b1b5;
+  justify-content: center;
+}
+
+.price>.per_month>span {
+  line-height: 1;
+}
+
+button {
+  background-color: rgb(140, 57, 171);
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.spinner {
+  padding: 8px 8px;
+}
+
+.logo_container>img {
+  width: 100px;
+}

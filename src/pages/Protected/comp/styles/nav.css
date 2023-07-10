@@ -1,14 +1,143 @@
 .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 p {
-    font-size: 12px;
-    cursor: pointer;
+  font-size: 12px;
+  cursor: pointer;
 }
 
-p.logo {
-    font-weight: 700;
+.logo {
+  width: 140px;
+  cursor: pointer;
+}
+
+.right {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+}
+
+.logo {
+  width: 8em;
+}
+
+.nav {
+  flex-direction: column !important;
+}
+
+.route {
+  display: flex;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 7px;
+  margin-top: 18px;
+  margin-bottom: 14px;
+  padding: 0px 20px;
+}
+
+p {
+  margin: 0px !important;
+}
+
+.installed {
+  color: #8C39AB;
+}
+
+img.arrow {
+  width: 10px !important;
+}
+
+div.installed_div {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 4px;
+  align-items: center;
+}
+
+.upper_header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.upper_right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.upper_right>p.limit {
+  font-size: 12px;
+  color: #606062;
+  font-weight: bold;
+}
+
+.upper_right>p>span>img {
+  width: 1em;
+  margin-bottom: 2px;
+}
+
+.upper_right>p.limit>span {
+  color: #8C39AB
+}
+
+.upper_right>p.limit>img {
+  width: 1em
+}
+
+.upper_right>img {
+  width: 2em;
+  cursor: pointer;
+}
+
+.manage {
+  display: flex;
+  line-height: 0.75;
+  flex-direction: row;
+  gap: 5px
+}
+
+.manage>p {
+  text-decoration: underline;
+  font-size: 0.8rem;
+}
+
+.manage>img {
+  margin-top: 2px;
+  transform: rotateY(180deg);
+}
+
+.logo_div {
+  position: relative;
+}
+
+.logo_div>img.green_dot {
+  position: absolute;
+  top: -10%;
+  left: 15%;
+}
+
+.lower_nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lower_nav>.logout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.lower_nav>.logout>img {
+  width: 1em
 }

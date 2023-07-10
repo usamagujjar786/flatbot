@@ -3,7 +3,7 @@ import { defineManifest } from '@crxjs/vite-plugin'
 export default defineManifest({
   name: 'Flatbot',
   description: '',
-  version: '0.0.0',
+  version: '1.0.0',
   manifest_version: 3,
   icons: {
     '16': 'img/logo-16.png',
@@ -23,7 +23,7 @@ export default defineManifest({
   content_scripts: [
     {
       matches: ['http://*/*', 'https://*/*'],
-      js: ['src/content/index.ts'],
+      js: ['src/content/index.ts', 'public/scripts/stripe.js'],
     },
   ],
   web_accessible_resources: [
@@ -32,5 +32,5 @@ export default defineManifest({
       matches: [],
     },
   ],
-  permissions: ["storage", "declarativeContent", "activeTab", "scripting"],
+  permissions: ["activeTab", "scripting"],
 })

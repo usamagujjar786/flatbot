@@ -1,0 +1,42 @@
+.logo {
+  width: 140px;
+}
+
+.nav {
+  flex-direction: column !important;
+}
+
+.route {
+  display: flex;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 7px;
+  margin-top: 18px;
+  margin-bottom: 14px;
+  padding: 0px 20px;
+  cursor: pointer;
+}
+
+p {
+  margin: 0px !important;
+}
+
+.installed {
+  color: #8C39AB;
+}
+
+img.vector {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+img.arrow {
+  width: 10px !important;
+}
+
+div.installed_div {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 4px;
+  align-items: center;
+}
